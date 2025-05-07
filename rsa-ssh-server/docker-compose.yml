@@ -1,0 +1,10 @@
+# version: '3.8'
+
+services:
+  ssh-server:
+    build: .
+    container_name: rsa_ssh_demo
+    ports:
+      - "2222:22"
+    volumes:
+      - ./authorized_keys:/authorized_keys:ro
